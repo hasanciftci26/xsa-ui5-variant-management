@@ -1,0 +1,31 @@
+ID: personalization_api
+_schema-version: '2.1'
+description: Personalization API for SAPUI5 Variant Management
+version: 0.0.1
+
+modules:
+ - name: personalization_api_db_deployer
+   type: hdb
+   path: db
+   requires:
+    - name: personalization_api_db
+    
+ - name: personalization_api_srv
+   type: nodejs
+   path: srv
+   provides:
+    - name: srv_api
+      properties:
+         url: ${default-url}
+   requires:
+   - name: personalization_api_db      
+   - name: personalization_api_auth      
+
+resources:
+ - name: personalization_api_db
+   type: com.sap.xs.hdi-container
+   parameters:
+     service: hana
+     service-plan: hdi-shared
+ - name: personalization_api_auth
+   type: org.cloudfoundry.existing-service     

@@ -1,0 +1,22 @@
+{
+	"dependencies": {
+		"@sap/hdbext": "8.0.2",
+		"@sap/xsenv": "4.2.0",
+		"@sap/xssec": "3.6.1",
+		"express": "4.18.2",
+		"passport": "0.7.0"
+	},
+	"description": "ExpressJS API for SAPUI5 Variant Management",
+	"devDependencies": {},
+	"files": [],
+	"main": "server.js",
+	"name": "srv",
+	"scripts": {
+		"start": "node server.js",
+		"test": "node testrun.js"
+	},
+	"engines": {
+		"node": "^18.x"
+	},
+	"version": "1.0.0"
+}

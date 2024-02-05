@@ -1,0 +1,35 @@
+{
+	"Admin": {
+		"isKeyUser": true,
+		"isKeyUserTranslationEnabled": true,
+		"isProductiveSystem": true,
+		"isVariantSharingEnabled": true,
+		"isVersioningEnabled": true,
+		"isVariantAdaptationEnabled": true,
+		"isPublicLayerAvailable": true,
+		"isPublicFlVariantEnabled": true,
+		"isPublishAvailable": true
+	},
+	"PublicViewManager": {
+		"isKeyUser": false,
+		"isKeyUserTranslationEnabled": false,
+		"isProductiveSystem": false,
+		"isVariantSharingEnabled": true,
+		"isVersioningEnabled": false,
+		"isVariantAdaptationEnabled": false,
+		"isPublicLayerAvailable": true,
+		"isPublicFlVariantEnabled": false,
+		"isPublishAvailable": false
+	},
+	"RegularUser": {
+		"isKeyUser": false,
+		"isKeyUserTranslationEnabled": false,
+		"isProductiveSystem": false,
+		"isVariantSharingEnabled": false,
+		"isVersioningEnabled": false,
+		"isVariantAdaptationEnabled": false,
+		"isPublicLayerAvailable": false,
+		"isPublicFlVariantEnabled": false,
+		"isPublishAvailable": false
+	}
+}

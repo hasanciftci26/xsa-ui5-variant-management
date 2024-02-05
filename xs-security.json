@@ -1,0 +1,62 @@
+{
+	"xsappname": "personalization-api",
+	"tenant-mode": "dedicated",
+	"scopes": [{
+		"name": "$XSAPPNAME.Admin",
+		"description": "Admin rights to create/edit public views.",
+		"granted-apps": [
+			"personalization-api-consumer"
+		]
+	}, {
+		"name": "$XSAPPNAME.PublicViewManager",
+		"description": "PublicViewManager rights to create public views. However, can only edit own public views.",
+		"granted-apps": [
+			"personalization-api-consumer"
+		]
+	}, {
+		"name": "$XSAPPNAME.RegularUser",
+		"description": "Can only create user specific views. No rights to create/edit public views. However, public views can be used.",
+		"granted-apps": [
+			"personalization-api-consumer"
+		]
+	}],
+	"attributes": [],
+	"role-templates": [{
+		"name": "AdminRole",
+		"default-role-name": "AdminRole",
+		"scope-references": [
+			"$XSAPPNAME.Admin"
+		]
+	}, {
+		"name": "PublicViewManagerRole",
+		"default-role-name": "PublicViewManagerRole",
+		"scope-references": [
+			"$XSAPPNAME.PublicViewManager"
+		]
+	}, {
+		"name": "RegularUserRole",
+		"default-role-name": "RegularUserRole",
+		"scope-references": [
+			"$XSAPPNAME.RegularUser"
+		]
+	}],
+	"role-collections": [{
+		"name": "PersAPIAdmin",
+		"description": "Personalization API Admin Role Collection",
+		"role-template-references": [
+			"$XSAPPNAME.AdminRole"
+		]
+	}, {
+		"name": "PersAPIPublicViewManager",
+		"description": "Personalization API PublicViewManager Role Collection",
+		"role-template-references": [
+			"$XSAPPNAME.PublicViewManagerRole"
+		]
+	}, {
+		"name": "PersAPIRegularUser",
+		"description": "Personalization API RegularUser Role Collection",
+		"role-template-references": [
+			"$XSAPPNAME.RegularUserRole"
+		]
+	}]
+}
